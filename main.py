@@ -86,7 +86,7 @@ from reportlab.pdfgen import canvas
 from my_draggable_switch import DraggableSwitch 
 from write_in_tigrina import KeyboardListenerHandler
 import json
-from my_input_text import plain_text_meta_info,extract_ms_word_text_with_metadata
+# from my_input_text import plain_text_meta_info,extract_ms_word_text_with_metadata
 class TextEditor:
     def __init__(self, root,csv_file=None, default_language="english",inputText=None):
         self.root = root
