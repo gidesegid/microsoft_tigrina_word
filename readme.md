@@ -1,4 +1,4 @@
-# Writing Tigrinya
+# 📝 Writing Tigrinya
 
 **Writing Tigrinya** is a desktop application designed to help users write, edit, and format text in the **Tigrinya language** easily.  
 The application aims to provide a **Tigrinya-centered alternative to Microsoft Word**, making digital writing more accessible for Tigrinya speakers.
