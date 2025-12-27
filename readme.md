@@ -70,7 +70,7 @@ To empower Tigrinya speakers with practical digital tools that make writing, lea
 
 You can download the latest Windows release here:
 
-➡️ https://github.com/gidesegid/microsoft_tigrina_word/releases/latest
+➡️ https://github.com/gidesegid/microsoft_tigrina_word/releases/tag/Microsoft_Tigrina_word_writer
 
 ---
 
@@ -82,7 +82,7 @@ This is a known false positive. The application is safe, and the full source cod
 ## Using the repository
    #### Fork the repository to your local computer.
    #### Open project in vs-code/ or any IDE of your wish
-   
+
    create an environment
    ```
    python -m venv your_env_name
