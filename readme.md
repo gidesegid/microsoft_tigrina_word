@@ -78,3 +78,24 @@ You can download the latest Windows release here:
 
 Some antivirus software may show warnings because this application is built using Python.  
 This is a known false positive. The application is safe, and the full source code is available in this repository.
+
+## Using the repository
+   Fork the repository
+   when you open the project, create an environment
+   ```
+   python -m venv your_env_name
+   ```
+   After environment is created then
+   ```
+   pip install -r requirements.txt
+   ```
+   Move to your created envoroment
+   ```
+   <!-- For windows os -->
+   your_env_name/scripts/activate
+   ```
+ 
+  run the application
+   ```
+   python main.py
+   ```
