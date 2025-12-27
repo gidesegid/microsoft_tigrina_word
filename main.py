@@ -801,6 +801,8 @@ class TextEditor:
             return None
     
     def add_or_replace_action_info(self, info):
+        image_info_list = self.image_editor.get_images_info()
+        print("image_info_list:",image_info_list)
         # The object to be added or replaced
         obj = {
             "text": info["text"],
@@ -809,7 +811,8 @@ class TextEditor:
             "tags": info['tags'],
             "font_family": info['font_family'],
             "font_size": info['font_size'],
-            "color": info['color']
+            "color": info['color'],
+            "image_info":image_info_list
         }
         
         # Search for an object with the same "text" key in the collection
@@ -824,19 +827,22 @@ class TextEditor:
 
     def getInfo(self):
         info = self.get_selected_text_with_style()
-        print("info>>>>>>:",info)
+        # Get images info (Base64)
+        image_info_list = self.image_editor.get_images_info()
+        print("image_info_list:",image_info_list)
         if info:
-            obj={
-                "text":info["text"],
-                "start_index":info["start_index"],
-                "end_index":info["end_index"],
-                "tags":info['tags'],
-                "font_family":info['font_family'],
-                "font_size":info['font_size'],
-                "font_size":info['font_size'],
-                "color":info["color"]
-            }
-            self.add_or_replace_action_info(obj)
+                obj={
+                        "text":info["text"],
+                        "start_index":info["start_index"],
+                        "end_index":info["end_index"],
+                        "tags":info['tags'],
+                        "font_family":info['font_family'],
+                        "font_size":info['font_size'],
+                        "font_size":info['font_size'],
+                        "color":info["color"],
+                        "image_info":image_info_list
+                    }
+                self.add_or_replace_action_info(obj)
         else:
             print("No text selected.")
         cursor_info = self.get_cursor_position()
