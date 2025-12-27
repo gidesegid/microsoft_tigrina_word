@@ -80,8 +80,10 @@ Some antivirus software may show warnings because this application is built usin
 This is a known false positive. The application is safe, and the full source code is available in this repository.
 
 ## Using the repository
-   Fork the repository
-   when you open the project, create an environment
+   #### Fork the repository to your local computer.
+   #### Open project in vs-code/ or any IDE of your wish
+   
+   create an environment
    ```
    python -m venv your_env_name
    ```
