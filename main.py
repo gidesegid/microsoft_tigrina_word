@@ -85,6 +85,8 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from my_draggable_switch import DraggableSwitch 
 from write_in_tigrina import KeyboardListenerHandler
+from Image_Editor import ImageEditor
+
 import json
 # from my_input_text import plain_text_meta_info,extract_ms_word_text_with_metadata
 class TextEditor:
@@ -103,6 +105,7 @@ class TextEditor:
         self.keyboard_handler = KeyboardListenerHandler()
         self.keyboard_handler.start_listeners()
         
+
         self.current_file_in_process=None
         self.current_file = None  # Keep track of current file path
         # Root container for all widgets
@@ -178,6 +181,8 @@ class TextEditor:
         
         # Bind typing events to apply the current font
         self.text_area.bind("<KeyPress>", self.apply_new_font)
+
+        self.image_editor = ImageEditor(self.text_area)
 
         if inputText !=None:
           self.openFile(inputText)
@@ -456,9 +461,6 @@ class TextEditor:
         x = self.toolbar.winfo_x() - self.drag_start_x + event.x
         y = self.toolbar.winfo_y() - self.drag_start_y + event.y
         self.toolbar.place(x=x, y=y)
-    
-    
-    
     def open_word_document(self):
         # Open a file dialog to select a Word document
         file_path = filedialog.askopenfilename(
@@ -503,7 +505,7 @@ class TextEditor:
         self.tools_menu.add_command(label=self.translate("Save"), command=self.save_file)
         self.tools_menu.add_separator()
         self.tools_menu.add_command(label="Print Page", command=self.hardware_print)
-        self.tools_menu.add_command(label="Insert Image", command=self.insert_image)
+        self.tools_menu.add_command(label="Insert Image", command=lambda:self.image_editor.insert_image())
         self.tools_menu.add_separator()
         self.tools_menu.add_command(label="Bold", command=self.make_bold)
         self.tools_menu.add_command(label="Underline", command=self.make_underline)
