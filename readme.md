@@ -25,15 +25,6 @@ Most popular word processors use English-based menus and tools, which can be cha
 
 ---
 
-## 🌐 Translation Feature
-
-- Optional translation functionality  
-- Translate from **Tigrinya to other languages**  
-- Translate from **other languages to Tigrinya**  
-- Requires an active internet connection  
-
----
-
 ## 🧩 Target Users
 
 - Native Tigrinya speakers  
